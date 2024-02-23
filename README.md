@@ -4,6 +4,9 @@
 
 This project focuses on predicting high or low salaries from job descriptions using text analytics techniques. The objective is to build and test classification models, specifically using a Naïve Bayes classifier, to analyze how textual features extracted from job descriptions can be indicative of salary levels. The analysis includes data preprocessing, feature extraction, model training, evaluation, and exploration of methods to improve model accuracy.
 
+## Data Source
+http://www.kaggle.com/c/job-salary-prediction
+
 ## Installation
 
 Ensure you have Python installed on your system. Then, install the required libraries using:
