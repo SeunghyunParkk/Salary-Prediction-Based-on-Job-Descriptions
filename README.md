@@ -37,8 +37,6 @@ Evaluation: Assess model accuracy and visualize results with a confusion matrix.
 Improvement: Explore strategies to enhance model performance, such as feature selection optimization and addressing class imbalance.
 Refer to the Jupyter notebook for detailed code examples and methodologies.
 
-Contributing
+## Contributing
 Contributions to improve the model or explore additional features are welcome. Please adhere to standard coding practices and document any changes.
 
-License
-Specify the license under which your project is released.
