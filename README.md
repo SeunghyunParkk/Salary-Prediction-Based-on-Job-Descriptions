@@ -10,8 +10,7 @@ Ensure you have Python installed on your system. Then, install the required libr
 
 ```bash
 pip install nltk scikit-learn pandas numpy matplotlib seaborn
-exit
-
+```
 Additionally, download necessary NLTK resources:
 
 
@@ -21,7 +20,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
-
+```
 Dataset Preparation
 Select 2500 data points from the provided dataset, dividing them into training and test sets. Ensure the data is balanced across your target classes for more reliable model performance.
 
