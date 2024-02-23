@@ -27,11 +27,11 @@ Select 2500 data points from the provided dataset, dividing them into training a
 ## Usage
 The project involves several steps:
 
-### Data Preprocessing: Tokenize text, remove stopwords, and apply lemmatization.
-### Feature Extraction: Use CountVectorizer or TfidfVectorizer for converting text data into a vectorized format.
-### Model Training: Train a Naïve Bayes classifier using the training set.
-### Evaluation: Assess model accuracy and visualize results with a confusion matrix.
-### Improvement: Explore strategies to enhance model performance, such as feature selection optimization and addressing class imbalance.
+Data Preprocessing: Tokenize text, remove stopwords, and apply lemmatization.
+Feature Extraction: Use CountVectorizer or TfidfVectorizer for converting text data into a vectorized format.
+Model Training: Train a Naïve Bayes classifier using the training set.
+Evaluation: Assess model accuracy and visualize results with a confusion matrix.
+Improvement: Explore strategies to enhance model performance, such as feature selection optimization and addressing class imbalance.
 Refer to the Jupyter notebook for detailed code examples and methodologies.
 
 Contributing
