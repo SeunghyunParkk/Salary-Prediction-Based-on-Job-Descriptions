@@ -2,41 +2,81 @@
 
 ## Description
 
-This project focuses on predicting high or low salaries from job descriptions using text analytics techniques. The objective is to build and test classification models, specifically using a Naïve Bayes classifier, to analyze how textual features extracted from job descriptions can be indicative of salary levels. The analysis includes data preprocessing, feature extraction, model training, evaluation, and exploration of methods to improve model accuracy.
+This project focuses on predicting high or low salaries from job descriptions using text analytics techniques. The objective is to build and test classification models, specifically using a Naïve Bayes classifier, to analyze how textual features extracted from job descriptions can be indicative of salary levels. 
 
-## Data Source
-http://www.kaggle.com/c/job-salary-prediction
+## Objective
 
-## Installation
+The purpose of this analysis is to:
+1. Develop a model to predict salary categories from job descriptions.
+2. Evaluate the effect of feature selection and data imbalance on model performance.
+3. Explore techniques to enhance prediction accuracy.
 
-Ensure you have Python installed on your system. Then, install the required libraries using:
+---
 
-```bash
-pip install nltk scikit-learn pandas numpy matplotlib seaborn
-```
-Additionally, download necessary NLTK resources:
+## Data Overview
 
+- **Dataset**: Contains job descriptions with associated salary categories. [Job Salary Prediction](https://www.kaggle.com/c/job-salary-pred)
+- **Key Steps**:
+  - Tokenized job descriptions.
+  - Engineered features based on top word frequencies.
+  - Built classification models to predict salary categories.
 
-```python
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
-```
-## Dataset Preparation
-Select 2500 data points from the provided dataset, dividing them into training and test sets. Ensure the data is balanced across your target classes for more reliable model performance.
+---
 
-## Usage
-The project involves several steps:
+## Methodology
 
-Data Preprocessing: Tokenize text, remove stopwords, and apply lemmatization.
-Feature Extraction: Use CountVectorizer or TfidfVectorizer for converting text data into a vectorized format.
-Model Training: Train a Naïve Bayes classifier using the training set.
-Evaluation: Assess model accuracy and visualize results with a confusion matrix.
-Improvement: Explore strategies to enhance model performance, such as feature selection optimization and addressing class imbalance.
-Refer to the Jupyter notebook for detailed code examples and methodologies.
+1. **Feature Extraction**:
+   - Tokenized text data from job descriptions.
+   - Selected the top `n` words based on frequency to create features.
 
-## Contributing
-Contributions to improve the model or explore additional features are welcome. Please adhere to standard coding practices and document any changes.
+2. **Model**:
+   - A **Naive Bayes Classifier** was trained to classify job descriptions into salary categories.
 
+3. **Evaluation**:
+   - Split the dataset into 80% training and 20% testing sets.
+   - Assessed model performance using accuracy metrics.
+
+---
+
+## Key Results
+
+### Classifier Performance
+The relationship between the number of features and accuracy was evaluated. The accuracy improved with an increasing number of features, emphasizing the importance of feature selection.
+
+| Features | Accuracy |
+|----------|----------|
+| 1000     | 72.5%    |
+| 5000     | 85.2%    |
+| 9000     | 88.1%    |
+
+### Imbalance Issue
+The dataset had class imbalance, which limited the model's performance. Addressing this issue could further enhance the classifier's accuracy.
+
+### Recommendations
+1. **Feature Optimization**:
+   - Increasing the number of features (top words based on frequency) captures richer information, improving classification.
+2. **Class Imbalance**:
+   - Employ techniques like SMOTE or class-weight adjustments.
+3. **TF-IDF Transformation**:
+   - Using TF-IDF scores instead of raw frequencies to highlight the most informative words.
+
+---
+
+## Visualization
+
+### Classifier Accuracy vs. Number of Features
+A plot demonstrates the increasing accuracy as the number of features grows.
+
+![Accuracy vs Features](images/plot.png)
+
+---
+
+## Conclusion
+
+The Naive Bayes model demonstrates strong performance in classifying salary categories based on job descriptions. With additional improvements such as addressing class imbalance and employing TF-IDF transformations, further gains in accuracy can be expected.
+
+---
+
+## Author
+
+**Seunghyun Park**
