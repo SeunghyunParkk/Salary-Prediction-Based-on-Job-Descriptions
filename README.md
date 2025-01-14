@@ -16,7 +16,6 @@ The purpose of this analysis is to:
 ## Data Overview
 
 - **Dataset**: Contains job descriptions with associated salary categories. [Job Salary Prediction](https://www.kaggle.com/c/job-salary-prediction)
-- 
 - **Key Steps**:
   - Tokenized job descriptions.
   - Engineered features based on top word frequencies.
