@@ -1,79 +1,72 @@
-# Salary Prediction Based on Job Descriptions
+# Salary Prediction Using Job Descriptions
 
-## Description
-
-This project focuses on predicting high or low salaries from job descriptions using text analytics techniques. The objective is to build and test classification models, specifically using a Naïve Bayes classifier, to analyze how textual features extracted from job descriptions can be indicative of salary levels. 
-
-## Objective
-
-The purpose of this analysis is to:
-1. Develop a model to predict salary categories from job descriptions.
-2. Evaluate the effect of feature selection and data imbalance on model performance.
-3. Explore techniques to enhance prediction accuracy.
+## Overview
+This project focuses on utilizing text analytics to predict salary categories ('high' or 'low') based on job descriptions. Using machine learning models and natural language processing (NLP) techniques, we analyze key features in job postings to identify patterns associated with salary levels. The project achieves a model accuracy of **79.2%**, demonstrating the potential of text-based classification in real-world applications.
 
 ---
 
-## Data Overview
+## Key Findings
 
-- **Dataset**: Contains job descriptions with associated salary categories. [Job Salary Prediction](https://www.kaggle.com/c/job-salary-prediction)
-- **Key Steps**:
-  - Tokenized job descriptions.
-  - Engineered features based on top word frequencies.
-  - Built classification models to predict salary categories.
+### Model Performance
+- **Accuracy**: 79.2%
+- **Confusion Matrix Analysis**:
+  - **High Salary**: 
+    - Precision: 52.87%
+    - Recall: 73.45%
+  - **Low Salary**: 
+    - Precision: 80.88%
+    - Recall: 91.25%
+
+### Significant Words
+- **Top 10 Words Indicative of High Salary**:
+  1. Architect (20.3x more likely)
+  2. Allegis (15.4x more likely)
+  3. Collaborative (8.8x more likely)
+  4. Scrum (8.5x more likely)
+  5. Instrumentation (8.0x more likely)
+  6. Transformation (7.9x more likely)
+  7. ACA (7.4x more likely)
+  8. Equity (6.9x more likely)
+  9. Cloud (6.8x more likely)
+  10. Analogue (5.8x more likely)
+
+- **Top 10 Words Indicative of Low Salary**:
+  1. Restaurant (13.5x more likely)
+  2. Repair (11.2x more likely)
+  3. We (10.5x more likely)
+  4. Teacher (9.2x more likely)
+  5. NMC (9.0x more likely)
+  6. Assistant (8.8x more likely)
+  7. Hospitality (8.6x more likely)
+  8. Invoice (8.3x more likely)
+  9. School (8.3x more likely)
+  10. Kitchen (7.9x more likely)
 
 ---
 
-## Methodology
+## Methods and Techniques
 
-1. **Feature Extraction**:
-   - Tokenized text data from job descriptions.
-   - Selected the top `n` words based on frequency to create features.
+### Data Preprocessing
+- Tokenization and lemmatization of job descriptions.
+- Feature selection using the 2000 most frequent words.
 
-2. **Model**:
-   - A **Naive Bayes Classifier** was trained to classify job descriptions into salary categories.
+### Model Improvements
+1. **Addressing Class Imbalance**:
+   - The dataset showed significant imbalance between high and low salary classes, negatively impacting the model's performance.
+   - Techniques like resampling or weighted loss functions were considered.
 
-3. **Evaluation**:
-   - Split the dataset into 80% training and 20% testing sets.
-   - Assessed model performance using accuracy metrics.
+2. **Feature Optimization**:
+   - Increasing the number of features (words) to provide more comprehensive information for classification.
 
----
-
-## Key Results
-
-### Classifier Performance
-The relationship between the number of features and accuracy was evaluated. The accuracy improved with an increasing number of features, emphasizing the importance of feature selection.
-
-| Features | Accuracy |
-|----------|----------|
-| 1000     | 72.5%    |
-| 5000     | 85.2%    |
-| 9000     | 88.1%    |
-
-### Imbalance Issue
-The dataset had class imbalance, which limited the model's performance. Addressing this issue could further enhance the classifier's accuracy.
-
-### Recommendations
-1. **Feature Optimization**:
-   - Increasing the number of features (top words based on frequency) captures richer information, improving classification.
-2. **Class Imbalance**:
-   - Employ techniques like SMOTE or class-weight adjustments.
 3. **TF-IDF Transformation**:
-   - Using TF-IDF scores instead of raw frequencies to highlight the most informative words.
+   - Applied TF-IDF to highlight words that are particularly relevant to the classification task, improving model accuracy.
 
 ---
 
-## Visualization
-
-### Classifier Accuracy vs. Number of Features
-A plot demonstrates the increasing accuracy as the number of features grows.
-
-![Accuracy vs Features](images/plot.png)
-
----
-
-## Conclusion
-
-The Naive Bayes model demonstrates strong performance in classifying salary categories based on job descriptions. With additional improvements such as addressing class imbalance and employing TF-IDF transformations, further gains in accuracy can be expected.
+## Future Work
+- Experiment with advanced models like transformers for text classification.
+- Collect additional data to mitigate class imbalance.
+- Explore more sophisticated feature engineering techniques.
 
 ---
 
