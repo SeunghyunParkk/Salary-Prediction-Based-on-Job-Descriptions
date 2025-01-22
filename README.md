@@ -70,6 +70,12 @@ This project focuses on utilizing text analytics to predict salary categories ('
 
 ---
 
+## Data Source
+The dataset for this project was obtained from the Kaggle competition: [Job Salary Prediction](https://www.kaggle.com/competitions/job-salary-prediction/).
+
+---
+
+
 ## Author
 
 **Seunghyun Park**
