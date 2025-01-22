@@ -1,7 +1,7 @@
 # Salary Prediction Using Job Descriptions
 
 ## Overview
-This project focuses on utilizing text analytics to predict salary categories ('high' or 'low') based on job descriptions. Using machine learning models and natural language processing (NLP) techniques, we analyze key features in job postings to identify patterns associated with salary levels. The project achieves a model accuracy of **79.2%**, demonstrating the potential of text-based classification in real-world applications.
+This project focuses on utilizing text analytics to predict salary categories ('high' or 'low') based on job descriptions. Using machine learning models and natural language processing (NLP) techniques, I analyze key features in job postings to identify patterns associated with salary levels. The project achieves a model accuracy of **79.2%**, demonstrating the potential of text-based classification in real-world applications.
 
 ---
 
